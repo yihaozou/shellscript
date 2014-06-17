@@ -3,7 +3,6 @@
 ###                                                                       ###
 #############################################################################
 
-
 ### $HOME/log/.tmplog ###
 cd $home/log/.tmplog
 ls -lt |awk '{print $9}' |sed 's/.*/rm -rf &/'|sh
@@ -11,9 +10,7 @@ ls -lt |awk '{print $9}' |sed 's/.*/rm -rf &/'|sh
 ###  $HOME/log ###
 cd $HOME/log/
 ls -lr|grep ^d| awk '{print $9}'|grep ^2[0-9][0-9][0-9]0-9][0-9][0-9][0-9]$| sed '1,7d'| sed 's/.*/rm -rf &/'|sh
-
 ls -lt|grep -v ^d| awk '{print $9}' |sed '1,42d'| sed 's/.*/rm -rf &/'|sh
-
 
 ###  $HOME/mmonitor/logs ###
 cd $HOME/mmonitor/logs
@@ -32,6 +29,4 @@ do
 	else
 	    continue
 	fi
-done
-		
-		
+done		
